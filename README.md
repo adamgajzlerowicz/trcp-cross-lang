@@ -1,19 +1,23 @@
-# A minimal working tRPC example
-
-Requires node 18 (for global fetch).
-
-## Playing around
+### start server
 
 ```
-npm i
-npm run dev
+yarn dev:server
 ```
 
-Try editing the ts files to see the type checking in action :)
-
-## Building
+### run client
 
 ```
-npm run build
-npm run start
+cd client/_generated
+go run cmd/client/main.go
 ```
+
+regenerate frontend code
+```
+yarn compile:proto
+```
+
+regenerate backend code
+```
+make compile-proto
+```
+
