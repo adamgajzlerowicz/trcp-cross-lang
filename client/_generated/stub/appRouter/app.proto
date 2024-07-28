@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+// Define the package name
+package appRouter;
+
+// Define the request message for the byId procedure
+message ByIdRequest {
+  string id = 1;
+}
+
+// Define the response message for the byId procedure
+message ByIdResponse {
+  repeated User users = 1;
+}
+
+// Define the User message
+message User {
+  string name = 1;
+}
+
+// Define the service
+service AppRouter {
+  rpc ById (ByIdRequest) returns (ByIdResponse);
+}

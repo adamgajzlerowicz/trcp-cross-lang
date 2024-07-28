@@ -1,0 +1,33 @@
+{
+  "name": "examples-minimal",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev:server": "tsx watch --inspect src/server",
+    "dev:client": "wait-port 3000 && tsx watch src/client",
+    "dev": "run-p dev:* --print-label",
+    "test-dev": "start-server-and-test 'tsx src/server' 3000 'tsx src/client'",
+    "test-start": "start-server-and-test 'node dist/server' 3000 'node dist/client'",
+    "compile:proto": "protoc --plugin=./node_modules/.bin/protoc-gen-ts_proto --ts_proto_out=./src/_generated --ts_proto_opt=esModuleInterop=true,forceLong=string --proto_path=./src app.proto"
+  },
+  "dependencies": {
+    "@trpc/client": "npm:@trpc/client@next",
+    "@trpc/server": "npm:@trpc/server@next",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@protobuf-ts/plugin": "2.9.4",
+    "@types/google-protobuf": "^3",
+    "@types/node": "^20.10.0",
+    "google-protobuf": "3.21.4",
+    "npm-run-all": "^4.1.5",
+    "protobufjs": "^7.3.2",
+    "start-server-and-test": "^1.12.0",
+    "ts-proto": "1.181.1",
+    "ts-protoc-gen": "0.15.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.5.3",
+    "wait-port": "^1.0.1"
+  }
+}

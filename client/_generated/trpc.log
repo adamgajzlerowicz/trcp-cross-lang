@@ -1,0 +1,6 @@
+2024-07-28 12:20:02.443	ERROR	debuglog@v1.0.0/log.go:240	client request:/appRouter.AppRouter/ById, cost:302.125µs, to:127.0.0.1:8000, err:type:framework, code:111, msg:tcp client transport connection pool: dial tcp 127.0.0.1:8000: connect: connection refused, cost:250.25µs
+2024-07-28 12:20:02.443	FATAL	client/main.go:24	err: type:framework, code:111, msg:tcp client transport connection pool: dial tcp 127.0.0.1:8000: connect: connection refused, cost:250.25µs
+2024-07-28 12:20:16.786	ERROR	debuglog@v1.0.0/log.go:240	client request:/appRouter.AppRouter/ById, cost:2.238958ms, to:127.0.0.1:3000, err:type:framework, code:171, msg:tcp client transport ReadFrame: trpc framer: read framer head magic 18516 != 2352, not match
+2024-07-28 12:20:16.786	FATAL	client/main.go:24	err: type:framework, code:171, msg:tcp client transport ReadFrame: trpc framer: read framer head magic 18516 != 2352, not match
+2024-07-28 12:21:06.130	ERROR	debuglog@v1.0.0/log.go:240	client request:/appRouter.AppRouter/ById, cost:1.413416ms, to:127.0.0.1:3000, err:type:framework, code:171, msg:tcp client transport ReadFrame: trpc framer: read framer head magic 18516 != 2352, not match
+2024-07-28 12:21:06.131	FATAL	client/main.go:24	err: type:framework, code:171, msg:tcp client transport ReadFrame: trpc framer: read framer head magic 18516 != 2352, not match
